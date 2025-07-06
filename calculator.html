@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="gradecal.css">
+</head>
+<body>
+    <div class="container bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Grade Calculator</h1>
+        <p class="text-gray-600 mb-8">Enter marks for each subject (0-100) below:</p>
+
+        <div class="input-group mb-4 text-left">
+            <label for="subject1" class="block text-gray-700 text-sm font-bold mb-2">Subject 1 Marks:</label>
+            <input type="number" id="subject1" min="0" max="100" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <p id="error1" class="text-red-500 text-xs italic hidden">Please enter a valid mark for Subject 1 (0-100).</p>
+        </div>
+        <div class="input-group mb-4 text-left">
+            <label for="subject2" class="block text-gray-700 text-sm font-bold mb-2">Subject 2 Marks:</label>
+            <input type="number" id="subject2" min="0" max="100" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <p id="error2" class="text-red-500 text-xs italic hidden">Please enter a valid mark for Subject 2 (0-100).</p>
+        </div>
+        <div class="input-group mb-4 text-left">
+            <label for="subject3" class="block text-gray-700 text-sm font-bold mb-2">Subject 3 Marks:</label>
+            <input type="number" id="subject3" min="0" max="100" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <p id="error3" class="text-red-500 text-xs italic hidden">Please enter a valid mark for Subject 3 (0-100).</p>
+        </div>
+        <div class="input-group mb-4 text-left">
+            <label for="subject4" class="block text-gray-700 text-sm font-bold mb-2">Subject 4 Marks:</label>
+            <input type="number" id="subject4" min="0" max="100" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <p id="error4" class="text-red-500 text-xs italic hidden">Please enter a valid mark for Subject 4 (0-100).</p>
+        </div>
+        <div class="input-group mb-6 text-left">
+            <label for="subject5" class="block text-gray-700 text-sm font-bold mb-2">Subject 5 Marks:</label>
+            <input type="number" id="subject5" min="0" max="100" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <p id="error5" class="text-red-500 text-xs italic hidden">Please enter a valid mark for Subject 5 (0-100).</p>
+        </div>
+
+        <button id="calculateBtn" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition duration-300 ease-in-out">
+            Calculate Grade
+        </button>
+
+        <div id="resultBox" class="hidden mt-8 text-left">
+            <h2 class="text-xl font-semibold mb-2">Results:</h2>
+            <p id="subject1MarksDisplay"></p>
+            <p id="subject2MarksDisplay"></p>
+            <p id="subject3MarksDisplay"></p>
+            <p id="subject4MarksDisplay"></p>
+            <p id="subject5MarksDisplay"></p>
+            <p id="totalMarksDisplay" class="font-bold"></p>
+            <p id="averageMarksDisplay" class="font-bold"></p>
+            <p id="gradeDisplay" class="text-lg font-bold"></p>
+        </div>
+    </div>
+
+    <script src="gradecal.js"></script>
+</body>
+</html>
